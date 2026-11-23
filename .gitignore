@@ -1,0 +1,9 @@
+# Compiled files & IDE configs
+target/
+.settings/
+.vscode/
+.classpath
+.project
+
+# Keep live DB credentials
+src/main/resources/config.properties
