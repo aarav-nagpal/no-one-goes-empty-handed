@@ -32,6 +32,9 @@ public class PlayerDAO {
      * @return true if saved successfully, false otherwise
      */
     public boolean savePlayerResult(PlayerSession session, String status) {
+        if (dbManager == null) {
+            return false;
+        }
         String sql = "INSERT INTO players (player_name, highest_round, prize_won, status) VALUES (?, ?, ?, ?)";
         try {
             Connection conn = dbManager.getConnection();
@@ -56,6 +59,9 @@ public class PlayerDAO {
      */
     public List<PlayerResult> getAllPlayerResults() {
         List<PlayerResult> results = new ArrayList<>();
+        if (dbManager == null) {
+            return results;
+        }
         String sql = "SELECT id, player_name, highest_round, prize_won, status, played_at FROM players ORDER BY played_at DESC, id DESC";
         try {
             Connection conn = dbManager.getConnection();
