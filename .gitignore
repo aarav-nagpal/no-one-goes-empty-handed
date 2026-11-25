@@ -8,6 +8,5 @@ dependency-reduced-pom.xml
 .classpath
 .project
 
-# Private DB credentials & AI notes
+# Private DB credentials
 src/main/resources/config.properties
-PRD.md
