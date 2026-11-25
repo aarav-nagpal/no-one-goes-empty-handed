@@ -1,9 +1,13 @@
-# Compiled files & IDE configs
+# Compiled files, JARs & Maven shade artifacts
 target/
+dependency-reduced-pom.xml
+
+# IDE configs
 .settings/
 .vscode/
 .classpath
 .project
 
-# Keep live DB credentials
+# Private DB credentials & AI notes
 src/main/resources/config.properties
+PRD.md
